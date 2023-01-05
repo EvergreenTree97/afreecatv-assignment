@@ -29,9 +29,8 @@ object Versions {
         const val Material = "1.1.0"
         const val Activity = "1.4.0"
         const val LifecycleViewModel = "2.5.0"
-        const val Accompanist = "0.24.4-alpha"
-        const val Coil = "2.2.0"
-        const val Pager = "0.20.1"
+        const val Accompanist = "0.23.1"
+        const val Coil = "2.1.0"
     }
 
     object Test {

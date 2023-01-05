@@ -9,6 +9,7 @@ object Dependencies {
         const val Android = "com.google.dagger:hilt-android:${Versions.Jetpack.Hilt}"
         const val Kapt = "com.google.dagger:hilt-android-compiler:${Versions.Jetpack.Hilt}"
     }
+
     val Ktx = listOf(
         "androidx.core:core-ktx:${Versions.Ktx.Core}",
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Ktx.LifeCycle}",
@@ -26,15 +27,14 @@ object Dependencies {
     val Compose = listOf(
         "androidx.compose.material:material:${Versions.Compose.Material}",
         "androidx.activity:activity-compose:${Versions.Compose.Activity}",
-       //"com.google.accompanist:accompanist-placeholder:${Versions.Compose.Accompanist}",
-      //  "com.google.accompanist:accompanist-swiperefresh:${Versions.Compose.Accompanist}",
-      //  "com.google.accompanist:accompanist-systemuicontroller:${Versions.Compose.Accompanist}",
-       "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.Compose.LifecycleViewModel}",
+        "com.google.accompanist:accompanist-swiperefresh:${Versions.Compose.Accompanist}",
+        "com.google.accompanist:accompanist-systemuicontroller:${Versions.Compose.Accompanist}",
+        "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.Compose.LifecycleViewModel}",
         "androidx.compose.ui:ui-tooling:${Versions.Compose.Main}",
         "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.Main}",
-     //   "io.coil-kt:coil-compose:${Versions.Compose.Coil}",
-      //  "com.google.accompanist:accompanist-pager:${Versions.Compose.Pager}",
-    //    "com.google.accompanist:accompanist-pager-indicators:${Versions.Compose.Pager}",
+        "io.coil-kt:coil-compose:${Versions.Compose.Coil}",
+        "com.google.accompanist:accompanist-pager:${Versions.Compose.Accompanist}",
+        "com.google.accompanist:accompanist-pager-indicators:${Versions.Compose.Accompanist}",
     )
     val Test = listOf(
         "junit:junit:${Versions.Test.JUnit}",
