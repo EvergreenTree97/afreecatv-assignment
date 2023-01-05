@@ -1,4 +1,4 @@
-package com.sangrok.afreecatv.ui.theme
+package com.sangrok.afreecatv.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
