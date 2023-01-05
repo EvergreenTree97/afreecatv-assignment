@@ -22,6 +22,7 @@ object Versions {
 
     object Jetpack {
         const val Hilt = "2.42"
+        const val Paging = "3.1.1"
     }
 
     object Compose {
@@ -31,6 +32,7 @@ object Versions {
         const val LifecycleViewModel = "2.5.0"
         const val Accompanist = "0.23.1"
         const val Coil = "2.1.0"
+        const val Paging = "1.0.0-alpha13"
     }
 
     object Test {

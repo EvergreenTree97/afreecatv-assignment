@@ -18,6 +18,7 @@ dependencies {
     kapt(Dependencies.Hilt.Kapt)
     implementation(project(Modules.Domain))
     implementation(Dependencies.Hilt.Android)
+    implementation(Dependencies.Paging.Runtime)
     Dependencies.Test.forEach(::testImplementation)
     Dependencies.Essential.forEach(::implementation)
     Dependencies.Network.forEach(::implementation)

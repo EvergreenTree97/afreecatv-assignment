@@ -10,6 +10,12 @@ object Dependencies {
         const val Kapt = "com.google.dagger:hilt-android-compiler:${Versions.Jetpack.Hilt}"
     }
 
+    object Paging{
+        const val Runtime = "androidx.paging:paging-runtime:${Versions.Jetpack.Paging}"
+        const val Common = "androidx.paging:paging-common:${Versions.Jetpack.Paging}"
+    }
+
+
     val Ktx = listOf(
         "androidx.core:core-ktx:${Versions.Ktx.Core}",
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.Ktx.LifeCycle}",
@@ -35,6 +41,7 @@ object Dependencies {
         "io.coil-kt:coil-compose:${Versions.Compose.Coil}",
         "com.google.accompanist:accompanist-pager:${Versions.Compose.Accompanist}",
         "com.google.accompanist:accompanist-pager-indicators:${Versions.Compose.Accompanist}",
+        "androidx.paging:paging-compose:${Versions.Compose.Paging}",
     )
     val Test = listOf(
         "junit:junit:${Versions.Test.JUnit}",
