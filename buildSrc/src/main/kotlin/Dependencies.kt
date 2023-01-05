@@ -16,7 +16,6 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Ktx.ViewModel}",
     )
 
-
     val Network = listOf(
         "com.squareup.retrofit2:retrofit:${Versions.Network.Retrofit}",
         "com.squareup.okhttp3:logging-interceptor:${Versions.Network.OkHttp}",
@@ -26,12 +25,13 @@ object Dependencies {
 
     val Compose = listOf(
         "androidx.compose.material:material:${Versions.Compose.Material}",
+        "androidx.compose.ui:ui:${Versions.Compose.Main}",
+        "androidx.compose.runtime:runtime:${Versions.Compose.Main}",
+        "androidx.compose.foundation:foundation:${Versions.Compose.Main}",
         "androidx.activity:activity-compose:${Versions.Compose.Activity}",
         "com.google.accompanist:accompanist-swiperefresh:${Versions.Compose.Accompanist}",
         "com.google.accompanist:accompanist-systemuicontroller:${Versions.Compose.Accompanist}",
         "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.Compose.LifecycleViewModel}",
-        "androidx.compose.ui:ui-tooling:${Versions.Compose.Main}",
-        "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.Main}",
         "io.coil-kt:coil-compose:${Versions.Compose.Coil}",
         "com.google.accompanist:accompanist-pager:${Versions.Compose.Accompanist}",
         "com.google.accompanist:accompanist-pager-indicators:${Versions.Compose.Accompanist}",

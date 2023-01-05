@@ -6,7 +6,7 @@ object Versions {
     }
 
     object Compiler {
-        const val Compose = "1.1.0"
+        const val Compose = "1.1.1"
     }
 
     object Ktx {
@@ -25,8 +25,8 @@ object Versions {
     }
 
     object Compose {
-        const val Main = "1.1.0"
-        const val Material = "1.1.0"
+        const val Main = "1.1.1"
+        const val Material = "1.1.1"
         const val Activity = "1.4.0"
         const val LifecycleViewModel = "2.5.0"
         const val Accompanist = "0.23.1"
