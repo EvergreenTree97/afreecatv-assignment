@@ -16,7 +16,7 @@ java {
 dependencies {
     kapt(Dependencies.Hilt.Kapt)
     implementation(Dependencies.Hilt.Core)
-    testImplementation(Dependencies.Paging.Common)
+    implementation(Dependencies.Paging.Common)
     Dependencies.Essential.forEach(::implementation)
     Dependencies.Test.forEach(::testImplementation)
 }
