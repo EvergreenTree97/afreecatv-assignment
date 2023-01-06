@@ -10,7 +10,7 @@ android {
     namespace = "com.sangrok.data"
     compileSdk = Apps.compileSdk
     defaultConfig{
-        //buildConfigField("String", "API_URL", "\"http://api-dev.semonemo.xyz/\"")
+        buildConfigField("String", "API_URL", "\"https://openapi.afreecatv.com/\"")
     }
 }
 
