@@ -12,11 +12,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Tab
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -38,11 +34,11 @@ import kotlinx.coroutines.launch
 
 @Composable
 internal fun MainScreen(
-    viewModel: MainViewModel
+    viewModel: MainViewModel,
 ) {
-    var tabIndex by remember { mutableStateOf(0) }
-    val pagerState = rememberPagerState()
+    val pagerState = rememberPagerState(0)
     val coroutineScope = rememberCoroutineScope()
+
     Scaffold(
         topBar = {
             TopBar(
@@ -53,21 +49,20 @@ internal fun MainScreen(
         },
     ) {
         Column {
-            AfreecaTabBar(selectedTabIndex = tabIndex) {
+            AfreecaTabBar(selectedTabIndex = pagerState.currentPage) {
                 tabData.forEachIndexed { index, text ->
                     Tab(
                         modifier = Modifier
                             .padding(horizontal = 16.dp)
                             .background(Color.White),
-                        selected = tabIndex == index,
+                        selected = pagerState.currentPage == index,
                         onClick = {
-                            tabIndex = index
                             coroutineScope.launch { pagerState.animateScrollToPage(index) }
                         },
                         text = {
                             AfreecaText(
                                 text = text,
-                                style = if (tabIndex == index) {
+                                style = if (pagerState.currentPage == index) {
                                     HeadLineSemiBold.copy(color = MainBlue)
                                 } else {
                                     HeadLineRegular
