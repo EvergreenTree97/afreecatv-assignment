@@ -18,12 +18,12 @@ class BroadPagingSource(
             val position = params.key ?: 1
             val response = broadDataSource.getBroads(
                 clientId = request.clientId,
-                categoryId = request.clientId,
-                page = request.page
+                categoryId = request.categoryId,
+                page = position
             )
 
             val prevKey = if (position == 1) null else position - 1
-            val nextKey = if (response.broads.count() == 6) null else position + 1
+            val nextKey = if (response.broads.isEmpty()) null else position + 1
 
             LoadResult.Page(
                 data = response.broads.map { it.toDomain() },

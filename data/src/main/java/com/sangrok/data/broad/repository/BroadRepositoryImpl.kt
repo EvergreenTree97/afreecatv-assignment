@@ -19,14 +19,16 @@ class BroadRepositoryImpl @Inject constructor(
     override suspend fun getBroads(
         clientId: String,
         categoryId: String,
-        page: Int
     ): Flow<PagingData<Broad>> {
         return Pager(
-            config = PagingConfig(pageSize = 6),
+            config = PagingConfig(
+                pageSize = PageSize,
+                initialLoadSize = InitialLoadSize,
+            ),
             pagingSourceFactory = {
                 BroadPagingSource(
                     broadDataSource = broadDataSource,
-                    request = BroadRequest(clientId, categoryId, page)
+                    request = BroadRequest(clientId, categoryId)
                 )
             }
         ).flow
@@ -34,5 +36,10 @@ class BroadRepositoryImpl @Inject constructor(
 
     override suspend fun getCategories(clientId: String): List<Category> {
         return broadDataSource.getCategories(clientId).toDomain()
+    }
+
+    companion object {
+        private const val PageSize = 1
+        private const val InitialLoadSize = 20
     }
 }
