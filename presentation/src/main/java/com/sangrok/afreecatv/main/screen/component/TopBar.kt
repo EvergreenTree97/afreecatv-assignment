@@ -1,4 +1,4 @@
-package com.sangrok.afreecatv.screen.component
+package com.sangrok.afreecatv.main.screen.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -9,7 +9,7 @@ import androidx.compose.ui.res.painterResource
 import com.sangrok.presentation.R
 
 @Composable
-internal fun TopBar(
+internal fun MainTopBar(
     modifier: Modifier = Modifier,
 ) {
     Box(

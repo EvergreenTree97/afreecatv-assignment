@@ -1,10 +1,10 @@
-package com.sangrok.afreecatv
+package com.sangrok.afreecatv.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import com.sangrok.afreecatv.screen.MainScreen
+import com.sangrok.afreecatv.main.screen.MainScreen
 import com.sangrok.afreecatv.theme.AfreecaTvTheme
 import dagger.hilt.android.AndroidEntryPoint
 
