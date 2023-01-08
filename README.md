@@ -65,6 +65,9 @@ core
 ### 최적화 방안
 
 1. LazyColumn의 key를 지정
+- key 속성을 통해 item의 위치를 기억하면 다음 장점들을 가질 수 있음
+    - 한 요소가 변화될 때 그 요소만 리컴포지션 됨
+    - 순서가 변경되어도 상태를 기억함
 ``` kotlin
 LazyColumn {
     items(
@@ -73,10 +76,16 @@ LazyColumn {
     ){ item ->
 }
 ```
-2. ImmutableList 사용
- ```ImmutableList<Broad>```
+
+<br>
+
+2. ImmutableList 사용 ```ImmutableList<Broad>```
+- 만약 List를 사용한다면, List를 인자로 받는 composable은 Stable하지 않다고 컴파일러에게 인식되어 recomposition을 스킵할 수 없음
+
+<br>
 
 3. PageConfig의 initialLoadSize를 20으로 설정
+- 사용자가 원하는 Tab을 찾기 전에 스크롤을 많이 내리지 않으므로, 초기 PagingData를 크게 설정할 필요가 없음
 ```kotlin
 config = PagingConfig(
     pageSize = PageSize,
