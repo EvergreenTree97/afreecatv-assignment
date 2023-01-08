@@ -167,6 +167,7 @@ private fun MainContent(
                 LazyColumn {
                     items(
                         items = broads,
+                        key = { it }
                     ) { item ->
                         item?.run {
                             BroadContent(
