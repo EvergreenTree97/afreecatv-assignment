@@ -58,7 +58,7 @@ internal const val InitialTabIndex = 0
 internal fun MainScreen(
     viewModel: MainViewModel,
 ) {
-    val activty = LocalContext.current as Activity
+    val activity = LocalContext.current as Activity
     val state by viewModel.state.collectAsStateWithLifecycle()
     val broads by rememberUpdatedState(newValue = state.broads.collectAsLazyPagingItems())
 
@@ -70,7 +70,7 @@ internal fun MainScreen(
         viewModel.sideEffect.collect {
             when (it) {
                 is MainSideEffect.NavigateToBroadDetail -> {
-                    activty.startActivityWithAnimation<DetailActivity>(
+                    activity.startActivityWithAnimation<DetailActivity>(
                         withFinish = false,
                         intentBuilder = {
                             val bundle = Bundle().apply {
