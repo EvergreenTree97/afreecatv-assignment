@@ -24,6 +24,7 @@ class BroadRepositoryImpl @Inject constructor(
             config = PagingConfig(
                 pageSize = PageSize,
                 initialLoadSize = InitialLoadSize,
+                enablePlaceholders = false
             ),
             pagingSourceFactory = {
                 BroadPagingSource(
