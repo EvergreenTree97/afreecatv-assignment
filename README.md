@@ -10,6 +10,7 @@
 - Coroutine
 - Paging3
 - Hilt
+- retrofit
 
 ## Package Structure
 
