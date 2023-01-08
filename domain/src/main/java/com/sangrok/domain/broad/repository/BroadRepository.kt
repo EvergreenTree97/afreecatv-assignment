@@ -9,7 +9,6 @@ interface BroadRepository {
     suspend fun getBroads(
         clientId: String,
         categoryId: String,
-        page: Int
     ): Flow<PagingData<Broad>>
 
     suspend fun getCategories(

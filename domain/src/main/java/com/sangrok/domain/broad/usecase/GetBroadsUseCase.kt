@@ -9,12 +9,10 @@ class GetBroadsUseCase @Inject constructor(
     suspend operator fun invoke(
         clientId: String,
         categoryId: String,
-        page: Int
     ) = runCatching{
         repository.getBroads(
             clientId = clientId,
             categoryId = categoryId,
-            page = page,
         )
     }
 }

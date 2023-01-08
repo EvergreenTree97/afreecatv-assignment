@@ -1,15 +1,12 @@
 package com.sangrok.domain.broad.model
 
+import java.io.Serializable
+
 data class Broad(
     val title: String,
     val id: String,
     val nickname: String,
+    val thumbnail: String,
     val profile: String,
-    val grade: Grade,
     val totalViewCount: String,
-)
-
-enum class Grade(val number: String){
-    Normal("0"),
-    Adult("19")
-}
+): Serializable
