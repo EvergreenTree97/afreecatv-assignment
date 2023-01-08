@@ -19,4 +19,6 @@ include(
     ":data",
     ":domain",
     ":presentation",
+    ":core",
 )
+include(":core")

@@ -3,6 +3,7 @@ object Versions {
         const val Kotlin = "1.6.10"
         const val Gradle = "7.3.1"
         const val Coroutines = "1.6.0"
+        const val ImmutableCollections = "0.3.5"
     }
 
     object Compiler {

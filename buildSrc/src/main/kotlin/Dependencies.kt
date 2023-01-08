@@ -1,8 +1,12 @@
 object Dependencies {
 
     val Essential = listOf(
-        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Essential.Coroutines}"
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Essential.Coroutines}",
     )
+
+    object Kotlin {
+        const val ImmutableCollections = "org.jetbrains.kotlinx:kotlinx-collections-immutable:${Versions.Essential.ImmutableCollections}"
+    }
 
     object Hilt {
         const val Core = "com.google.dagger:hilt-core:${Versions.Jetpack.Hilt}"
@@ -10,7 +14,7 @@ object Dependencies {
         const val Kapt = "com.google.dagger:hilt-android-compiler:${Versions.Jetpack.Hilt}"
     }
 
-    object Paging{
+    object Paging {
         const val Runtime = "androidx.paging:paging-runtime:${Versions.Jetpack.Paging}"
         const val Common = "androidx.paging:paging-common:${Versions.Jetpack.Paging}"
     }
